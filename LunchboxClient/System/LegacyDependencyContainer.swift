@@ -3,6 +3,7 @@ import SwiftUI
 struct DependencyContainer: EnvironmentKey {
     
     let tasks: Tasks
+    let state: AppState
     
     static var defaultValue: Self { Self.default }
     
@@ -14,7 +15,10 @@ struct DependencyContainer: EnvironmentKey {
         // repositories are created, add them here
         
         let repositories = Repositories()
-        return Self(tasks: Tasks(repositories: repositories))
+        return Self(
+            tasks: Tasks(repositories: repositories),
+            state: AppState()
+        )
     }()
 }
 
