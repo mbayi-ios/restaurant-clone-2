@@ -3,6 +3,8 @@ class Config {
     enum Property: String {
         case hostUrl = "Host URL"
         case tenant = "Tenant"
+        case headerFontName = "Header Font Name"
+        case bodyFontName = "Body Font Name"
     }
     
     static let shared = Config()
@@ -17,6 +19,14 @@ class Config {
   
     var hostUrl: String {
         return propertyString(forKey: .hostUrl)
+    }
+    
+    var headerFontName: String? {
+        return safePropertyString(forKey: .headerFontName)
+    }
+    
+    var bodyFontName: String? {
+        return safePropertyString(forKey: .bodyFontName)
     }
     
     private func safePropertyString(for givenBundle: Bundle? = nil, forKey key: Property) -> String? {
