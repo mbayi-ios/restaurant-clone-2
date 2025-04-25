@@ -29,6 +29,11 @@
 			path = LunchboxClient;
 			sourceTree = "<group>";
 		};
+		CDF0488A2DBB72A900C4D591 /* LunchboxUI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LunchboxUI;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +50,7 @@
 		CD51D2F02DBA140B00D647FD = {
 			isa = PBXGroup;
 			children = (
+				CDF0488A2DBB72A900C4D591 /* LunchboxUI */,
 				CD51D2FB2DBA140B00D647FD /* LunchboxClient */,
 				CD51D2FA2DBA140B00D647FD /* Products */,
 			);
@@ -75,6 +81,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				CD51D2FB2DBA140B00D647FD /* LunchboxClient */,
+				CDF0488A2DBB72A900C4D591 /* LunchboxUI */,
 			);
 			name = LunchboxClient;
 			packageProductDependencies = (
