@@ -10,3 +10,5 @@
 
 #include "GlobalEnvironment.xcconfig"
 #include "Client.xcconfig"
+
+ENVIRONMENT = production
