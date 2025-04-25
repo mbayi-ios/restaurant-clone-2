@@ -4,5 +4,7 @@
 <dict>
 	<key>Host URL</key>
 	<string>$(HOST_URL)</string>
+	<key>Tenant</key>
+	<string>$(TENANT)</string>
 </dict>
 </plist>

@@ -2,6 +2,7 @@ import Foundation
 class Config {
     enum Property: String {
         case hostUrl = "Host URL"
+        case tenant = "Tenant"
     }
     
     static let shared = Config()
@@ -10,6 +11,10 @@ class Config {
         return Bundle(for: type(of: self))
     }
     
+    var tenant: String {
+        return propertyString(forKey: .tenant)
+    }
+  
     var hostUrl: String {
         return propertyString(forKey: .hostUrl)
     }
