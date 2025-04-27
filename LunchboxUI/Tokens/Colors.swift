@@ -222,6 +222,6 @@ extension View
     func setStatusColor(on backgroundColor: Color) -> some View
     {
         self
-            .preferredColorScheme(backgroundColor.isLight() ? .dark : .light)
+           // .preferredColorScheme(backgroundColor.isLight() ? .dark : .light)
     }
 }

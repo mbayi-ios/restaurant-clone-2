@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct RootNavigationView: View {
+    @Environment(\.theme) var theme: Theme
     @State var tab: Tab = .home
     
     var body: some View {
@@ -13,12 +14,12 @@ struct RootNavigationView: View {
     
     private func tabBar() -> some View {
         ZStack {
-            Color.gray.opacity(0.1)
+            theme.colors.surfaceBottomNavigation.backgroundColor
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
                 Divider()
-                    .foregroundColor(Color.yellow)
+                    .foregroundColor(theme.colors.surfaceBottomNavigation.separatorColor)
                 
                 HStack {
                     TabItem(isSelected: tab == .home, title: "home", icon: Image(systemName: "house"),
@@ -48,3 +49,4 @@ struct RootNavigationView: View {
         }
     }
 }
+

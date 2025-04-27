@@ -9,7 +9,11 @@ import SwiftUI
 
 struct AccountView: View {
     var body: some View {
-        Text("Account Page View")
+        BaseNavigationView {
+            Text("Account Page View")
+        }
+        
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

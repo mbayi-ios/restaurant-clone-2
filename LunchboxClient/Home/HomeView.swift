@@ -2,18 +2,25 @@ import SwiftUI
 import Combine
 
 struct HomeView: View {
-    
+    @Environment(\.theme) var theme: Theme
     @Environment(\.dependencies.tasks) var tasks
+    
     
     @State private var cancellables = Set<AnyCancellable>()
     
     var body: some View {
-        VStack() {
-            Text("Home Page View")
+        BaseNavigationView {
+            VStack() {
+                Text("Home Page View")
+                    .foregroundColor(.red)
+            }
+            .onAppear {
+                fetchThemeConfiguration()
+            }
         }
-        .onAppear {
-            fetchThemeConfiguration()
-        }
+        .padding(.top, 16)
+        .background(theme.colors.surfaceDefault.backgroundColor)
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     private func fetchThemeConfiguration() {

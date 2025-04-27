@@ -8,6 +8,8 @@ extension RootNavigationView {
     }
     
     struct TabItem: View {
+        @Environment(\.theme) var theme: Theme
+        
         private let isSelected: Bool
         private let action: () -> Void
         private let title: String
@@ -41,6 +43,14 @@ extension RootNavigationView {
                 }
                 
             }
+            .foregroundColor(tint())
+            .frame(maxWidth: .infinity)
+            .frame(height: 40)
+            .padding(.vertical, 4)
+        }
+        
+        private func tint() -> Color {
+            isSelected ? theme.colors.surfaceBottomNavigation.accentColor : theme.colors.surfaceBottomNavigation.textColor
         }
         
         private func icon() -> Image {

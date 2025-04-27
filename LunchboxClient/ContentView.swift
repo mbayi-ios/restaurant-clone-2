@@ -8,11 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            RootNavigationView()
+    @AppStorage("didShowWalkthrough", store: .standard) var didShowWalkthrough = false
+    
+    @State private var didShowSplash = true
+    
+    private var isOnboardingPresented: Binding<Bool> {
+        Binding {
+            !didShowWalkthrough
+        } set: { value in
+            didShowWalkthrough = !value
         }
-        .padding()
+    }
+    var body: some View {
+        BaseView {
+            if didShowSplash {
+                if isOnboardingPresented.wrappedValue {
+                    BaseNavigationView {
+                       
+                    }
+                    
+                    .onAppear {
+                        self.didShowWalkthrough = true
+                    }
+                }
+                else {
+                    RootNavigationView()
+                }
+            } else {
+                SplashView(splashCompleted: $didShowSplash)
+            }
+           
+        }
         .onAppear {
             Config.shared.printAllConfigProperties()
         }
@@ -23,3 +49,6 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+
+

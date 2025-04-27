@@ -2,12 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIStatusBarStyle</key>
+	<string>$(INFOPLIST_KEY_UIStatusBarStyle)</string>
 	<key>Host URL</key>
 	<string>$(HOST_URL)</string>
 	<key>Tenant</key>
 	<string>$(TENANT)</string>
 	<key>CFBundleDisplayName</key>
 	<string>$(BUNDLE_DISPLAY_NAME)</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>Brand</string>
+	</dict>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Inter.ttf</string>

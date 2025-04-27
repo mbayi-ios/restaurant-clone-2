@@ -15,3 +15,8 @@ BODY_FONT_FILE_NAME = Inter.ttf
 
 HEADER_FONT_NAME = Inter
 BODY_FONT_NAME = Inter
+
+
+APPEARANCE = Light
+
+INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent
