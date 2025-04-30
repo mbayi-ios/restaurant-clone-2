@@ -9,6 +9,7 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 HOST_URL = novadine.com
+//HOST_URL = lunchbox.io
 
 HEADER_FONT_FILE_NAME = Inter.ttf
 BODY_FONT_FILE_NAME = Inter.ttf
