@@ -66,15 +66,19 @@ struct HomeHubContentView: View {
     
     @ViewBuilder
     private func ctaButtonView() -> some View {
-        Button {
+        HStack {
+            Button {
+                
+            } label: {
+                Text("Button Text")
+            }
+            .primary(height: 30, paddingVertical: 8)
+            .padding(.leading, 16)
+            .padding(.bottom, 16)
             
-        } label: {
-            Text("Button Text")
+            Spacer()
+                .padding(.trailing)
         }
-        .padding(.leading, 16)
-        .padding(.bottom, 16)
-        Spacer()
-            .padding(.trailing)
         
     }
     
