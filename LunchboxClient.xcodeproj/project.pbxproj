@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CD9A76D42DBE3DD6000BD0B1 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = CD9A76D32DBE3DD6000BD0B1 /* Nuke */; };
+		CD9A76D62DBE3DD6000BD0B1 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = CD9A76D52DBE3DD6000BD0B1 /* NukeExtensions */; };
+		CD9A76D82DBE3DD6000BD0B1 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = CD9A76D72DBE3DD6000BD0B1 /* NukeUI */; };
+		CD9A76DA2DBE3DD6000BD0B1 /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = CD9A76D92DBE3DD6000BD0B1 /* NukeVideo */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		CD51D2F92DBA140B00D647FD /* LunchboxClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchboxClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -41,6 +48,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9A76D82DBE3DD6000BD0B1 /* NukeUI in Frameworks */,
+				CD9A76D42DBE3DD6000BD0B1 /* Nuke in Frameworks */,
+				CD9A76D62DBE3DD6000BD0B1 /* NukeExtensions in Frameworks */,
+				CD9A76DA2DBE3DD6000BD0B1 /* NukeVideo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +96,10 @@
 			);
 			name = LunchboxClient;
 			packageProductDependencies = (
+				CD9A76D32DBE3DD6000BD0B1 /* Nuke */,
+				CD9A76D52DBE3DD6000BD0B1 /* NukeExtensions */,
+				CD9A76D72DBE3DD6000BD0B1 /* NukeUI */,
+				CD9A76D92DBE3DD6000BD0B1 /* NukeVideo */,
 			);
 			productName = LunchboxClient;
 			productReference = CD51D2F92DBA140B00D647FD /* LunchboxClient.app */;
@@ -114,6 +129,9 @@
 			);
 			mainGroup = CD51D2F02DBA140B00D647FD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CD9A76D22DBE3DD6000BD0B1 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CD51D2FA2DBA140B00D647FD /* Products */;
 			projectDirPath = "";
@@ -730,6 +748,40 @@
 			defaultConfigurationName = "Debug - Production";
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD9A76D22DBE3DD6000BD0B1 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD9A76D32DBE3DD6000BD0B1 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD9A76D22DBE3DD6000BD0B1 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		CD9A76D52DBE3DD6000BD0B1 /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD9A76D22DBE3DD6000BD0B1 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		CD9A76D72DBE3DD6000BD0B1 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD9A76D22DBE3DD6000BD0B1 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		CD9A76D92DBE3DD6000BD0B1 /* NukeVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD9A76D22DBE3DD6000BD0B1 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeVideo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CD51D2F12DBA140B00D647FD /* Project object */;
 }

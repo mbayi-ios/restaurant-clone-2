@@ -4,8 +4,11 @@ import Combine
 class ThemeConfigurationRepository: Repository {
     private let client: HTTPClient
     
-    init(client: HTTPClient) {
+    private let store: ThemeConfigurationStore
+    
+    init(client: HTTPClient, store: ThemeConfigurationStore) {
         self.client = client
+        self.store = store
     }
     
     func getThemeConfiguration() -> AnyPublisher<ThemeConfiguration, Error> {
@@ -15,6 +18,7 @@ class ThemeConfigurationRepository: Repository {
         return client.perform(request).tryMap { response in
             let configuration = ThemeConfiguration(response: response.data)
             
+            self.store.storeThemeConfiguration(configuration)
             print("hello: \(configuration)")
             return configuration
             
